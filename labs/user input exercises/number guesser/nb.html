@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greeter</title>
+</head>
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/p5"></script>
+<script src="js/nb.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Number Guessing Game</title>
+<style>
+body {
+width: 50%;
+max-width: 800px;
+min-width: 480px;
+
+}
+</style>
+</head>
+
+<body>
+<h1>Guess The Number</h1>
+
+<p>Enter number between 1 - 20 </p>
+
+<div class="form">
+<label>Enter a guess Number: </label>
+<input type = "text" id = "txt" class = "txt">
+<input type = "submit" value = "Submit" id = "submitguess">
+</div>
+<script type = "text/javascript">
+var y = Math.floor(Math.random() * 20 + 1); //here random number from 1 to 20 is generated
+
+document.getElementById("submitguess").onclick = function(){
+var x = document.getElementById("txt").value;
+if(x == y)
+{   
+alert("Guessed number and random number are equal");
+}
+else if(x > y) /* if guessed number is greater
+than random number*/
+{   
+
+alert("Guessed Number is too high");
+document.getElementById("txt").value="";
+}
+else
+{
+
+alert("Guessed Number is too low");
+document.getElementById("txt").value="";
+}
+}
+
+</script>
+</body>
+</html>
+
