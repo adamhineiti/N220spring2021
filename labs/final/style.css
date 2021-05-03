@@ -1,0 +1,127 @@
+/* ------------------- //
+//     Style Reset     //
+// ------------------- */
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ------------------- //
+//    Basic Styling    //
+// ------------------- */
+
+body {
+    /* page padding */
+    margin: 100px 0;
+    /* page font */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header text styling */
+#title {
+    text-align: center;
+    font-size: 4em;
+    line-height: 2em;
+}
+
+#reset-game-button {
+    /* layout */
+    display: none;
+    margin-top: 1em;
+    padding: .5em 1em;
+    border-radius: .5em;
+
+    /* font */
+    font-size: 2em;
+    line-height: 1em;
+    
+    /* colors */
+    background-color: slategray;
+    color: white;
+}
+
+
+/* ------------------- //
+//      Game Board     //
+// ------------------- */
+
+#game-board {
+    /* center board */
+    margin: 0 auto;
+}
+
+/* board size */
+#game-board {
+    width: 300px;
+    height: 300px;
+}
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+/* board grid */
+/* https://css-tricks.com/snippets/css/complete-guide-grid/ */
+#game-board {
+    /* set layout to grid */
+    display: grid;
+    /* divide contents into 3 columns */
+    grid-template-columns: auto auto auto;
+}
+
+/** 
+  * BORDERS
+  **/
+.box {
+    /* same as
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    */
+    border: 3px solid black;
+    /* put border inside of elemnt */
+    box-sizing: border-box;
+}
+/* top 3 */
+.box:nth-of-type(-n+3) {
+    border-top: none;
+}
+/* left 3 */
+.box:nth-of-type(3n+1) {
+    border-left: none;
+}
+/* bottom 3 */
+.box:nth-of-type(n+7) {
+    border-bottom: none;
+}
+/* right 3 */
+.box:nth-of-type(3n) {
+    border-right: none;
+}
+
+
+
+/* ------------------- //
+//     X's and O's     //
+// ------------------- */
+
+.box {
+    /* font attributes */
+    font-size: 4em;
+    font-weight: bold;
+}
+
+/* center X and O (flex = little cheet to center items) */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
